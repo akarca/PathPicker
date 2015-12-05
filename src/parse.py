@@ -135,7 +135,7 @@ REGEX_WATERFALL = [{
 # repository in which path resides (i.e. the current directory).
 # both git and hg have commands for this, so let's just use those.
 def getRepoPath():
-    proc = subprocess.Popen(["git rev-parse --show-toplevel"],
+    proc = subprocess.Popen(["git rev-parse --show-toplevel | sed -e 's-^/cygdrive/\(.\)/\?-\u\1:/-'"],
                             stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE,
                             shell=True,

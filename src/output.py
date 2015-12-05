@@ -91,7 +91,7 @@ def getEditorAndPath():
         editor = os.path.basename(editor_path)
         logger.addEvent('using_editor_' + editor)
         return editor, editor_path
-    return 'vim', 'vim'
+    return 'subl', 'subl'
 
 
 def getEditFileCommand(filePath, lineNum):
