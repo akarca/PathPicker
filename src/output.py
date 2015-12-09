@@ -170,11 +170,12 @@ def appendAliasExpansion():
     # despite documentation hinting otherwise.
     #
     # so here we must ask bash to turn on alias expansion.
-    appendToFile("""
-if type shopt > /dev/null; then
-  shopt -s expand_aliases
-fi
-""")
+    #     appendToFile("""
+    # if type shopt > /dev/null; then
+    #   shopt -s expand_aliases
+    # fi
+    # """)
+    pass
 
 
 def appendFriendlyCommand(command):
